@@ -35,7 +35,7 @@
     "nicName": "myVMNic",
     "OSDiskName": "osdisk",
     "publicIPAddressType": "Dynamic",
-    "scriptUrl": "https://tonytrytouse.blob.core.windows.net/images/test.sh",
+    "scriptUrl": "",
     "storageAccountType": "Standard_LRS",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
