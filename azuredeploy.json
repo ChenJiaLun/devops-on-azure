@@ -49,7 +49,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2017-07-20",
+      "apiVersion": "2016-09-01",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[variables('networkSecurityGroup')]",
       "location": "[resourceGroup().location]",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "apiVersion": "2017-07-20",
+      "apiVersion": "2016-09-01",
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "[variables('publicIPAddressName')]",
       "location": "[resourceGroup().location]",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "apiVersion": "2017-07-20",
+      "apiVersion": "2016-09-01",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
       "location": "[resourceGroup().location]",
@@ -162,7 +162,7 @@
       }
     },
     {
-      "apiVersion": "2017-07-20",
+      "apiVersion": "2016-09-01",
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicName')]",
       "location": "[resourceGroup().location]",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "apiVersion": "2017-07-20-preview",
+      "apiVersion": "2016-04-30-preview",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('vmName')]",
       "location": "[resourceGroup().location]",
@@ -231,7 +231,7 @@
         {
           "type": "extensions",
           "name": "CustomScriptExtension",
-          "apiVersion": "2017-07-20",
+          "apiVersion": "2015-06-15",
           "location": "[resourceGroup().location]",
           "dependsOn": [
             "[variables('vmName')]"
@@ -255,7 +255,7 @@
   "outputs": {
     "vm-fqdn": {
       "type": "string",
-      "value": "[reference(variables('publicIPAddressName'), '2017-07-20').dnsSettings.fqdn]"
+      "value": "[reference(variables('publicIPAddressName'), '2016-03-30').dnsSettings.fqdn]"
     }
   }
 }
